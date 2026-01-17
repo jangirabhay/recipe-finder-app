@@ -38,7 +38,7 @@ const Login = () => {
         Alert.alert('Long password', password);
       }
     } else {
-      Navigation.navigate('HomePage');
+      navigation.navigate('HomePage');
       dispatch(login(true));
     }
   };
