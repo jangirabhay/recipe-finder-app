@@ -1,99 +1,143 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+#Recipe Finder App 🍳
 
-# Getting Started
+This is a React Native mobile application that allows you to find recipes to cook at home.
+You can search, save favorites, and explore recipes from various categories — all in one app.
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+This project was bootstrapped using @react-native-community/cli
+.
 
-## Step 1: Start Metro
+Features 🚀
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+Recipe Search: Find recipes using keywords or ingredients.
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+Favorites: Save your favorite recipes locally.
 
-```sh
-# Using npm
+Offline Storage: Uses Redux + AsyncStorage to store favorite recipes and app state.
+
+Navigation: Smooth React Navigation between screens.
+
+Image Support: Display recipe images beautifully.
+
+Modern UI: Clean, mobile-friendly interface.
+
+Cross-platform: Works on both iOS and Android.
+
+Optional Extra Features:
+
+Filters by cuisine or dietary preferences
+
+Sorting recipes by popularity, difficulty, or time
+
+Dark/Light mode toggle
+
+Screens / Navigation 🧭
+
+Home Screen: Browse latest and trending recipes.
+
+Search Screen: Search recipes by name or ingredient.
+
+Recipe Details: View full recipe with instructions, ingredients, and image.
+
+Favorites: Quick access to saved recipes.
+
+Settings: Manage app preferences and theme.
+
+Navigation handled with React Navigation and state management via Redux.
+
+Getting Started 🏁
+
+Make sure you have completed the React Native environment setup
+.
+
+Step 1: Install Dependencies
+npm install
+# or
+yarn install
+
+Step 2: Start Metro
 npm start
-
-# OR using Yarn
+# or
 yarn start
-```
 
-## Step 2: Build and run your app
-
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
-
-### Android
-
-```sh
-# Using npm
+Step 3: Run the App
+Android
 npm run android
-
-# OR using Yarn
+# or
 yarn android
-```
 
-### iOS
-
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
-
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
-
-```sh
-bundle install
-```
-
-Then, and every time you update your native dependencies, run:
-
-```sh
+iOS
+bundle install        # first time only
 bundle exec pod install
-```
-
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
-
-```sh
-# Using npm
 npm run ios
-
-# OR using Yarn
+# or
 yarn ios
-```
 
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
+Step 4: Modify the App
 
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
+Open App.tsx (or your screens folder) and start customizing.
+Changes will automatically refresh on your device via Fast Refresh.
 
-## Step 3: Modify your app
+Libraries & Tools Used 🔧
 
-Now that you have successfully run the app, let's make changes!
+React Native – Core framework
 
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
+React Navigation – For screen navigation
 
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
+Redux + Redux Toolkit – Global state management
 
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
+AsyncStorage – Persistent local storage
 
-## Congratulations! :tada:
+Axios / Fetch – API requests
 
-You've successfully run and modified your React Native App. :partying_face:
+React Native Vector Icons – Icons in UI
 
-### Now what?
+React Native Paper / UI Kitten (Optional) – Modern UI components
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
+CocoaPods – For iOS dependencies
 
-# Troubleshooting
+Screenshots 📱
 
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
+Add some screenshots here to show your app visually.
 
-# Learn More
+Troubleshooting 🛠️
 
-To learn more about React Native, take a look at the following resources:
+If you encounter errors:
 
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+Clear node_modules and reinstall:
+
+rm -rf node_modules
+npm install
+
+
+Reset Metro cache:
+
+npm start -- --reset-cache
+
+
+Android build clean:
+
+cd android
+./gradlew clean
+
+Learn More 📚
+
+React Native Docs
+
+Redux Docs
+
+React Navigation Docs
+
+Optional Commands 🧾
+
+List debug keystore info:
 
 keytool -keystore ./android/app/debug.keystore -list -v
+
+
+✅ This README now clearly communicates:
+
+What the app is (Recipe Finder)
+
+Features & tech used (navigation, Redux, AsyncStorage, modern UI)
+
+How to run and develop
